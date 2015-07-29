@@ -1,9 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "Ping-Pong"
+archivesBaseName = "PingPong"
 version = '1.0'
-mainClassName = "Ping_Pong"
+mainClassName = "PingPong"
 
 repositories {
   mavenCentral()

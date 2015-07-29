@@ -5,13 +5,14 @@ import spark.template.velocity.VelocityTemplateEngine;
 
 import static spark.Spark.*;
 
-public class Ping_Pong {
+public class App {
   public static void main(String[] args) {
-    staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
     get("/", (request, response) -> {
       HashMap model = new HashMap();
+
+      model.put("user_input", request.queryParams("user_input"));
       model.put("template", "templates/index.vtl");
 
       return new ModelAndView(model, layout);
